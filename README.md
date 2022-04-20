@@ -1,1 +1,1 @@
-# lazada-sdk
+LAZADA SDK FOR LARAVEL
