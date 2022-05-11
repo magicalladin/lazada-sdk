@@ -22,7 +22,7 @@ class LazopRequest
 
 		if($this->startWith($apiName,"//"))
 		{
-			throw new Exception("api name is invalid. It should be start with /");			
+			throw new Exception("api name is invalid. It should be start with /");
 		}
 	}
 
@@ -44,6 +44,12 @@ class LazopRequest
 			$this->udfParams[$key] = $value;
 		}
 	}
+
+    function addApiParamVariable($params){
+        foreach($params as $key => $valParams){
+            $this->udfParams[$key] = $valParams;
+        }
+    }
 
 	function addFileParam($key,$content,$mimeType = 'application/octet-stream')
 	{
